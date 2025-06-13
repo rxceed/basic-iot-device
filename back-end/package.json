@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.46",
+    "@types/express": "^5.0.3",
+    "@types/sequelize": "^4.28.20",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "typescript": "^5.8.3"
+  }
+}
