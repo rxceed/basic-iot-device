@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "jarkom-iot",
+			"path": "hardware/jarkom-iot"
+		}
+	],
+	"settings": {}
+}
