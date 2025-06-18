@@ -27,4 +27,5 @@ void loop() {
   digitalWrite(LED_MERAH, LOW);
   digitalWrite(LED_BIRU, LOW);
   digitalWrite(LED_HIJAU, HIGH);
+  delay(500);
 }
