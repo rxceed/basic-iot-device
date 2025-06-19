@@ -3,7 +3,7 @@ Basic IoT project repository for computer network course
 
 jadi gini lee...
 
-berikut merupakan tugas mr A (atmin tekkom)
+berikut merupakan tugas ms S (atmin tekkom)
 
 # Alat dan Bahan
 - sensor raindrops
