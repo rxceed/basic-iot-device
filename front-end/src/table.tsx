@@ -28,23 +28,37 @@ const RealTimeTable: React.FC = () => {
   }, [counter]);
 
   return (
-    <div style={{ fontFamily: "sans-serif", maxWidth: "400px" }}>
+    <div
+        style={{
+        fontFamily: "sans-serif",
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: 0,
+        padding: 0,
+        boxSizing: "border-box",
+        }}
+    >        
       <h2>Real-Time Data Table</h2>
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
-        <tbody>
-          {Object.entries(data).map(([key, value]) => (
-            <tr key={key}>
+        <table style={{borderCollapse: "collapse" }}>
+          <tbody>
+            {Object.entries(data).map(([key, value]) => (
+              <tr key={key}>
               <th scope="row" style={thStyle}>{key}</th>
               <td style={tdStyle}>{String(value)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              </tr>
+            ))}
+            </tbody>
+        </table>
     </div>
   );
 };
 
 const tdStyle: React.CSSProperties = {
+  backgroundColor: "#242424",
   padding: "8px 12px",
   border: "1px solid #ccc",
   textAlign: "left",
