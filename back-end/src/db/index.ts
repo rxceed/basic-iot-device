@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize";
+import { Sequelize } from "sequelize-typescript";
 import "dotenv/config"
 
 const DB: string = process.env.PG_DATABASE as string;
@@ -11,15 +11,17 @@ export const db = new Sequelize(DB, USER, PASSWORD, {
     host: HOST,
     port: DB_PORT,
     dialect: "postgres",
-    logging: console.log
+    logging: console.log,
+    models: [__dirname + '../models/*.model.ts']
 });
 
 try
 {
     db.authenticate();
     console.log("Connection established to database");
-} 
+}
 catch(err) 
 {
     console.error("Error connectiong to database: ", err);
 };
+
