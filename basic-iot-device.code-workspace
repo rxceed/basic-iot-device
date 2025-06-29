@@ -8,5 +8,9 @@
 			"path": "hardware/jarkom-iot"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"system_error": "cpp"
+		}
+	}
 }
