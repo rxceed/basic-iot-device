@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
   background-image:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url('/background.png'); /* Put your image in /public */
+    url('/rain.gif'); /* Put your image in /public */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
