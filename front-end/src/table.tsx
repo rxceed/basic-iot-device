@@ -131,6 +131,18 @@ const RealTimeTable: React.FC = () => {
         borderRadius: "16px" }}>
         <Line data={chartData} options={chartOptions} />
       </div>
+      <div style={{
+        width: "90%",
+        maxWidth: "2000px",
+        background: "transparent",
+        borderRadius: "16px",
+        textAlign: "center"
+      }}>
+        <p>Muhammad Risang Radityatama 5024231028 || 
+          Bintang Narindra Putra Pratama 5024231038 || 
+          Muhammad Zia Alhambra 5024231059 || 
+          Muhammad Rafila Putra Firmansyah 5024231066</p>
+      </div>
     </div>
   );
 };
