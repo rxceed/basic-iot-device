@@ -11,7 +11,7 @@ export const db = new Sequelize(DB, USER, PASSWORD, {
     host: HOST,
     port: DB_PORT,
     dialect: "postgres",
-    logging: console.log,
+    logging: false,
     models: [__dirname + '../models/*.model.ts']
 });
 
