@@ -9,7 +9,7 @@ export const createSensorReadingTableService = async ()=>{
         console.log("Created sensor_readings table");
         return result;
     } 
-    catch(err) 
+    catch(err)
     {
         console.error("Error occured: ", err);
         return;
@@ -20,7 +20,7 @@ export const getAllSensorReadingService = async ()=>{
     try
     {
         const result = await SensorReading.findAll();
-        throw new Error("Failed to get sensor readings");
+        if(!result) throw new Error("Failed to get sensor readings");
         return result;
     }
     catch(err)
@@ -33,8 +33,14 @@ export const getAllSensorReadingService = async ()=>{
 export const insertSensorReadingService = async (data: sensorReadingInterface)=>{
     try
     {
-        const sensor = SensorReading.build({data});
+        const { rain_intensity, temperature, humidity } = data
+        const sensor = SensorReading.build({
+            rain_intensity: rain_intensity,
+            temperature: temperature,
+            humidity: humidity
+        });
         const result = await sensor.save();
+        if(!result) throw new Error("Failed to insert new data");
         return result;
     }
     catch(err)
@@ -51,7 +57,9 @@ export const updateSensorReadingService = async (id: number, data: sensorReading
             where:{
                 reading_id: id
             }
-        })
+        });
+        if(!result) throw new Error("Failed to update data");
+        return result;
     }
     catch(err)
     {
@@ -67,7 +75,8 @@ export const deleteSensorReadingByIDService = async (id: number)=>{
             where:{
                 reading_id: id
             }
-        })
+        });
+        if(!result) throw new Error("Failed to delete data");
         return result;
     }
     catch(err)
@@ -76,3 +85,27 @@ export const deleteSensorReadingByIDService = async (id: number)=>{
         return;
     }
 };
+
+export const deleteSensorReadingAllService = async ()=>{
+    try
+    {
+        const result = await SensorReading.truncate();
+        return 1;
+    }
+    catch(err)
+    {
+        console.error("Error occured: ", err);
+        return;
+    }
+};
+
+export const deleteSensorReadingBatch = async ()=>{
+    try
+    {
+
+    }
+    catch(err)
+    {
+        return;
+    }
+}
