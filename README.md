@@ -5,7 +5,6 @@ jadi gini lee...
 
 berikut merupakan tugas ms S 
 
-![Hasilnya](img/gambar.jpg)
 <img src="img/gambar.jpg" alt="Hasilnya" width="400"/>
 
 # Alat dan Bahan
