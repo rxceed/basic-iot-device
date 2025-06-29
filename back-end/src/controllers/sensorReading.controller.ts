@@ -6,18 +6,6 @@ import { CustomError } from "../middlewares";
 import { sensorReadingInterface } from "../models";
 import { sensorReadingSchema } from "../utils";
 
-
-export const tmplate = async (req: Request, res: Response, next: NextFunction) =>{
-    try
-    {
-
-    }
-    catch(err)
-    {
-        next(err);
-    }
-}
-
 export const createSensorReadingTable = async (req: Request, res: Response, next: NextFunction) =>{
     try
     {
@@ -52,6 +40,7 @@ export const insertSensorReading = async (req: Request, res: Response, next: Nex
         if(error) throw new CustomError(error.message, 400, "BAD REQUEST");
         const result = insertSensorReadingService(data);
         if(!result) throw new CustomError("Internal database error", 500, "ERROR"); 
+        console.log({message: "data inserted successfully", ...data})
         res.status(201).json({message: "data inserted successfully", ...data});
     }
     catch(err)

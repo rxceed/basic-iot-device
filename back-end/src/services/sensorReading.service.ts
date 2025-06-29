@@ -98,14 +98,3 @@ export const deleteSensorReadingAllService = async ()=>{
         return;
     }
 };
-
-export const deleteSensorReadingBatch = async ()=>{
-    try
-    {
-
-    }
-    catch(err)
-    {
-        return;
-    }
-}
